@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="cnt_ttl">お問い合わせ</h2>
+<hr class="ttl_underline">
+<p class="cnt_txt">
+	お問い合わせは下記のフォームよりお気軽にお問い合わせください。
+	<br/> お問い合わせ内容の確認後、担当者よりご連絡させて頂きます。
+</p>
+<div class="inner">
+
+<form enctype="multipart/form-data"  method="post" name="frm" novalidate>
+{% csrf_token %}
+		<div id="cont02">
+			<div id="mainWrap2">
+				<div class="contWrap contact">
+					<div class="otoiwrap position_sec clearfix">
+						<dl>
+							<dt>
+								<span class="required">必須</span> 取得資格
+								
+								<br>
+							</dt>
+						 <dd class="checkbox_sec clearfix">
+						 {% for quilcheck_boxs in quilcheck_box %}
+						 <p> {{ quilcheck_boxs }}</p>
+						 {% endfor %}
+						
+						
+							</dd> 
+						</dl>
+						<div class="error_message">{{ form.quilcheck_box.errors }}</div>
+					</div>
+					<div class="otoiwrap position_sec">
+						<dl class="d05">
+							<dt><span class="required">必須</span>希望就業時期</dt>
+							<dd>
+								 <p>{{work_period_sele}}</p>
+						
+							</dd>
+						</dl>
+						<div class="error_message"></div>
+					</div>
+					<div class="otoiwrap position_sec clearfix">
+						<dl>
+							<dt>
+								<span class="required">必須</span> 希望雇用形態
+							</dt>
+							<dd>
+						{% for employ_type_boxs in employ_type_box %}
+						 <p> {{ employ_type_boxs }}</p>
+						 {% endfor %}
+							
+							</dd>
+						</dl>
+						
+					</div>
+					<div class="otoiwrap2">
+						<dl class="d05 clearfix">
+							<dt><span class="required">必須</span>希望の勤務地</dt>
+								
+								<dd>
+								 <p>{{wanted_place_sele01}}</p>
+							
+								<p>{{wanted_place_sele02}}</p>
+									
+								</dd>
+							</dl>
+						
+						</div>
+						<div class="otoiwrap position_sec clearfix">
+							<dl>
+								<dt>
+									<span class="normal">任意</span> 希望業種
+								</dt>
+								<dd>
+								{% for wanted_industry_boxs in wanted_industry_box %}
+						 <p> {{ wanted_industry_boxs }}</p>
+						 {% endfor %}
+								
+									
+								</dd>
+							</dl>
+									</div>
+									<div class="otoiwrap2 ">
+										<dl class="d05">
+											<dt>
+												<span class="required">必須</span>お名前（全角）
+												<br>
+											</dt>
+											<dd>
+												 <p>{{name}}</p>
+											</dd>
+										</dl>
+									
+									</div>
+									<div class="otoiwrap2 ">
+										<dl class="d05">
+											<dt>
+												<span class="required">必須</span>フリガナ（全角）
+												<br>
+											</dt>
+											<dd>
+											<p>{{kana}}</p>
+											</dd>
+										</dl>
+									
+									</div>
+									<div class="otoiwrap2">
+										<dl class="d05 clearfix">
+											<dt><span class="required">必須</span>生年月日　西暦、月、日</dt>
+												
+												<dd>
+												 <p>{{birth_yearsele}}年</p>
+												
+												 <p>{{birth_monthsele}}月</p>
+												
+												 <p>{{birth_daysele}}日</p>
+												</dd>
+											</dl>
+										
+										</div>
+										<div class="otoiwrap2" >
+											<dl class="d05 clearfix">
+												<dt><span class="required">必須</span>住所</dt>
+													
+													<dd>
+													<p>{{address01_sele}}</p>
+													<p>{{address02}}</p>
+													
+													</dd>
+													
+												</dl>
+										</div>
+										
+											<div class="otoiwrap2">
+												<dl class="d05">
+													<dt><span class="required">必須</span>電話番号</dt>
+													<dd>
+													<p>{{tel}}</p>
+													</dd>
+												</dl>
+												
+											</div>
+											<div class="otoiwrap2 ">
+												<dl class="d05">
+													<dt><span class="required">必須</span>メールアドレス
+														
+													</dt>
+													<dd>
+												<p>{{from_email}}</p>
+													</dd>
+												</dl>
+											</div>
+											<div class="otoiwrap2">
+												<dl class="d05">
+													<dt><span class="normal">任意</span>ご質問・ご要望など</dt>
+													<dd>
+														<p>{{message}}</p>
+													</dd>
+												</dl>
+											</div>
+											<div id="bottom">
+												<div class="top_sec_btn03 submitalertoff"><div class="sec_btn03_txt" id="btnon"><input type="submit" value="> この内容で送信する" class="btn_submit"> </div></div>
+<div class="top_sec_btn04 submitalertoff"><div class="sec_btn04_txt" ><input type="button" value="< 入力画面に戻る" class="btn_submit02" onClick='history.back();'> </div></div>
+											</div>
+										</div>
+									</div>
+									<!--/ id cont02-->
+								</form>
+							</div>
+							</div>
+
+							{% endblock %}
+

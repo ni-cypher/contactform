@@ -1,0 +1,12 @@
+取得資格 :{{quilcheck_box}}
+希望就業時期:{{work_period_sele}}
+希望雇用形態 :{{employ_type_box}}
+希望の勤務地:{{wanted_place_sele01}},{{wanted_place_sele02}}
+希望業種  :{{wanted_industry_box}}
+お名前:{{name}}
+フリガナ :{{kana}}
+生年月日:{{birth_yearsele}}年 {{birth_monthsele}}月 {{birth_daysele}}日 
+住所:{{address01_sele}},{{address02}}
+電話番号 :{{tel}}
+メールアドレス:{{from_email}}
+ご質問・ご要望など :{{message}}

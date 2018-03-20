@@ -1,0 +1,69 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>お問い合わせ ｜Design Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap_custom.css' %}">
+    <link href="{% static 'css/stye_form.css' %}" rel="stylesheet">
+    <link href="{% static 'css/stye.css' %}" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="ver2 page gray_bg2" data-smoothscrolling="">
+    <div class="subpg_bg" id="cf">
+        <div class="header_h2">
+            header
+        </div>
+        <div>
+        </div>
+    </div>
+    <div>
+        <div id="contact_form">
+            <div class="content">
+                <h2 class="cnt_ttl">
+     お問い合わせ
+   </h2>
+                <hr class="ttl_underline">
+                <p class="cnt_txt">
+                    お問い合わせは下記のフォームよりお気軽にお問い合わせください。
+                    <br/> お問い合わせ内容の確認後、担当者よりご連絡させて頂きます。
+                </p>
+                <div class="inner">
+                <form method="post" novalidate>
+{% csrf_token %}
+<!-- {{ form.as_p }} -->
+<label for="subject">Enter subject</label>
+<input type="text" id="subject" name="subject">
+<label for="email">Enter email</label>
+<input type="email" id="email" name="from_email">
+<label for="message">Enter message</label>
+<textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+<div class="form-actions">
+<button type="submit">Send</button>
+</div>
+</form>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="ft_bggray">
+        <p class="fttxt">Copyright © 2016 Design Template All rights Reserved.</p>
+        <!-- <div id="add_sec"></div> -->
+    </footer>
+</body>
+
+</html>
+
+
+

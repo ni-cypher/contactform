@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="cnt_ttl">お問い合わせ</h2>
+<hr class="ttl_underline">
+<p class="cnt_txt">
+	お問い合わせは下記のフォームよりお気軽にお問い合わせください。
+	<br/> お問い合わせ内容の確認後、担当者よりご連絡させて頂きます。
+</p>
+<div class="inner">
+
+<form enctype="multipart/form-data"  method="post" name="frm" novalidate>
+{% csrf_token %}
+		<div id="cont02">
+			<div id="mainWrap2">
+				<div class="contWrap contact">
+					<div class="otoiwrap position_sec clearfix">
+						<dl>
+							<dt>
+								<span class="required">必須</span> 取得資格
+								<em class="check_ok position_icon2" id="multiplecheck_icon"></em>
+								<br>
+							</dt>
+						 <dd class="checkbox_sec clearfix">
+						  {{ form.quilcheck_box }}
+						
+							</dd> 
+						</dl>
+						<div class="error_message">{{ form.quilcheck_box.errors }}</div>
+					</div>
+					<div class="otoiwrap position_sec">
+						<dl class="d05">
+							<dt><span class="required">必須</span>希望就業時期<em id="selotoi_icon" class="position_icon2"></em></dt>
+							<dd class="clearfix select_cov sel22 arrow_icon full_wdh clearfix">
+								{{form.work_period_sele}}
+						<div class="error_message">{{ form.work_period_sele.errors }}</div>
+							</dd>
+						</dl>
+						<div class="error_message"></div>
+					</div>
+					<div class="otoiwrap position_sec clearfix">
+						<dl>
+							<dt>
+								<span class="required">必須</span> 希望雇用形態
+							</dt>
+							<dd class="checkbox_sec clearfix">
+							{{form.employ_type_box}}
+							</dd>
+						</dl>
+						<div class="error_message">{{ form.employ_type_box.errors }}</div>
+					</div>
+					<div class="otoiwrap2 position_sec" id="select_wrap">
+						<dl class="d05 clearfix">
+							<dt><span class="required">必須</span>希望の勤務地<em id="month_icon" class="position_icon"></em><em id="day_icon" class="position_icon2"></em>
+								<!-- <em id="selotoi4_icon"></em> --></dt>
+								<p class="clearboth"></p>
+								<dd class="select_cov sel20 arrow_icon half_wdh">
+								{{form.wanted_place_sele01}}
+								</dd>
+								<dd class="select_cov sel20 arrow_icon half_wdh">
+									{{form.wanted_place_sele02}}
+									
+								</dd>
+							</dl>
+						<div class="error_message">{{ form.wanted_place_sele01.errors }}</div>
+						<div class="error_message">{{ form.wanted_place_sele02.errors }}</div>
+						</div>
+						<div class="otoiwrap position_sec clearfix">
+							<dl>
+								<dt>
+									<span class="normal">任意</span> 希望業種
+								</dt>
+								<dd class="checkbox_sec clearfix">
+								{{form.wanted_industry_box}}
+									
+								</dd>
+										</dl>
+									</div>
+									<div class="otoiwrap2 position_sec">
+										<dl class="d05">
+											<dt>
+												<span class="required">必須</span>お名前（全角）<em id="user_name01_icon" class="position_icon2"></em>
+												<br>
+											</dt>
+											<dd class="tx205">
+												{{form.name}}
+											</dd>
+										</dl>
+										<div class="error_message">{{ form.name.errors }}</div>
+									</div>
+									<div class="otoiwrap2 position_sec">
+										<dl class="d05">
+											<dt>
+												<span class="required">必須</span>フリガナ（全角）<em id="user_name01_icon" class="position_icon2"></em>
+												<br>
+											</dt>
+											<dd class="tx205">
+											{{form.kana}}
+											</dd>
+										</dl>
+										<div class="error_message">{{ form.kana.errors}}</div>
+									</div>
+									<div class="otoiwrap2 position_sec date_select_wrap" id="select_wrap">
+										<dl class="d05 clearfix">
+											<dt><span class="required">必須</span>生年月日　西暦、月、日<em id="month_icon" class="position_icon"></em><em id="day_icon" class="position_icon2"></em>
+												<!-- <em id="selotoi4_icon"></em> --></dt>
+												<p class="clearboth"></p>
+												<dd class="date_select_cov sel20 arrow_icon half_wdh">
+												{{form.birth_yearsele}}
+												</dd>
+												<dd class="date_select_cov date_select_margin sel20 arrow_icon half_wdh">{{form.birth_monthsele}}
+												</dd>
+												<dd class="date_select_cov sel20 arrow_icon half_wdh">
+												{{form.birth_daysele}}
+												</dd>
+											</dl>
+											<div class="error_message">{{ form.birth_yearsele.errors}}</div>
+											<div class="error_message">{{ form.birth_monthsele.errors}}</div>
+											<div class="error_message">{{ form.birth_daysele.errors}}</div>
+										</div>
+										<div class="otoiwrap2 position_sec" id="select_wrap">
+											<dl class="d05 clearfix">
+												<dt><span class="required">必須</span>住所<em id="month_icon" class="position_icon"></em><em id="day_icon" class="position_icon2"></em>
+													<!-- <em id="selotoi4_icon"></em> --></dt>
+													<p class="clearboth"></p>
+													<dd class="select_cov sel20 arrow_icon half_wdh">
+													{{form.address01_sele}}
+													
+													</dd>
+													<dd class="tx205">
+													{{form.address02}}
+													</dd>
+												</dl>
+											<div class="error_message">{{ form.address01_sele.errors}}</div>
+											<div class="error_message">{{ form.address02.errors}}</div>
+											</div>
+											<div class="otoiwrap2 position_sec">
+												<dl class="d05">
+													<dt><span class="required">必須</span>電話番号<em id="tel_icon" class="position_icon2"></em></dt>
+													<dd class="tx205">
+													{{form.tel}}
+													</dd>
+												</dl>
+													<div class="error_message">{{ form.tel.errors}}</div>
+											</div>
+											<div class="otoiwrap2 position_sec">
+												<dl class="d05">
+													<dt><span class="required">必須</span>メールアドレス<em id="email_icon" class="position_icon2"></em>
+														<br>
+													</dt>
+													<dd class="tx205">
+												{{form.from_email}}
+													</dd>
+												</dl>
+											<div class="error_message">{{ form.from_email.errors}}</div>
+											</div>
+											<div class="otoiwrap2">
+												<dl class="d05">
+													<dt><span class="normal">任意</span>ご質問・ご要望など</dt>
+													<dd>
+														{{form.message}}
+													</dd>
+												</dl>
+											</div>
+											<div id="bottom">
+												<div class="top_sec_btn03 submitalertoff">
+													<div id="btn" class="sec_btn03_txt">
+														<input type="submit" class="btn_submit" value=">入力内容を確認" >
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/ id cont02-->
+								</form>
+							</div>
+
+							{% endblock %}
+

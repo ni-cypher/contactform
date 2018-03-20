@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>お問い合わせ ｜Design Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap_custom.css' %}">
+    <link href="{% static 'css/stye_form.css' %}" rel="stylesheet">
+    <link href="{% static 'css/stye.css' %}" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="ver2 page gray_bg2" data-smoothscrolling="">
+    <div class="subpg_bg" id="cf">
+        <div class="header_h2">
+            header
+        </div>
+        <div>
+        </div>
+    </div>
+    <div>
+        <div id="contact_form">
+            <div class="content">
+               {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="ft_bggray">
+        <p class="fttxt">Copyright © 2018 Design Template All rights Reserved.</p>
+        <!-- <div id="add_sec"></div> -->
+    </footer>
+</body>
+
+</html>
+
+
+

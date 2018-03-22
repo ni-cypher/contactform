@@ -1,0 +1,91 @@
+{% extends "base_index.html" %}
+{% block content %}
+
+
+
+
+{% for soups in soup %}
+ <div class="card01">
+            <div class="card01_tlt">
+              <h2>{{soups.prjName}}</h2>
+            </div>
+            <div class="card01_inner">
+              <div class="card01_txt">
+                <p></p>
+            </div>
+            <div class="card01_img_table clearfix">
+              <div class="card01_img">
+                <a href="#"><img src="img/kango_roo.gif" alt="images"></a>
+              </div>
+              <div class="card01_table">
+                <table>
+                  <tr>
+                    <th>テキストテキスト</th>
+                    <td>テキストテキスト</td>
+                  </tr>
+                  <tr>
+                    <th>テキストテキスト</th>
+                    <td>テキストテキスト</td>
+                  </tr>
+                  <tr>
+                    <th>テキストテキスト</th>
+                    <td>テキストテキスト</td>
+                  </tr>
+                </table>
+                <div class="card01_button">
+                  <a href="#">テキスト</a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+
+{% endfor %}
+
+
+
+<p>Recuritment yakusaishi</p>
+
+{% for soups2 in soup2 %}
+ <div class="card01">
+            <div class="card01_tlt">
+              <h2>{{soups2.prjName}}</h2>
+            </div>
+            <div class="card01_inner">
+              <div class="card01_txt">
+                <p></p>
+            </div>
+            <div class="card01_img_table clearfix">
+              <div class="card01_img">
+                <a href="#"><img src="img/kango_roo.gif" alt="images"></a>
+              </div>
+              <div class="card01_table">
+                <table>
+                  <tr>
+                    <th>テキストテキスト</th>
+                    <td>テキストテキスト</td>
+                  </tr>
+                  <tr>
+                    <th>テキストテキスト</th>
+                    <td>テキストテキスト</td>
+                  </tr>
+                  <tr>
+                    <th>テキストテキスト</th>
+                    <td>テキストテキスト</td>
+                  </tr>
+                </table>
+                <div class="card01_button">
+                  <a href="#">テキスト</a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+
+{% endfor %}
+
+
+
+
+{% endblock %}
+

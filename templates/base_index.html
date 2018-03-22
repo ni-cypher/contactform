@@ -1,0 +1,419 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Job Media</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="" rel="canonical">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/common_index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{% static 'js/general.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/top.js' %}"></script>
+</head>
+<body>
+
+<header id="header" class="clearfix">
+            <div class="pc pcMenu">
+              <div class="container container_header clearfix">
+                <h1 class="title">
+                  <span class="text">H1タイトルタイトル</span>
+                </h1>
+                <div class="header_left">
+                  <a href="#" class="logo"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+                        <p class="text">テキストテキストテキストテキストテキスト</p>
+                    </div>
+                    <div class="header_right">
+                        <div class="headerotiwrap clearfix">
+                            <div class="headeroti">
+                                <p class="inquiries">テキストテキストテキスト：9:30 - 20:00</p>
+                                <p class="phone"><img src="{% static 'img/ph.png' %}" alt="tel:0100100101"></p>
+                            </div>
+                            <p class="header_ph">
+                                <a href="#" class="link">テキストテキスト</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_bg">
+                    <div class="container">
+                        <ul class="menu_header clearfix">
+                            <li><a class="active" href="#"><span class="home"><img src="{% static 'img/home_icon.png' %}" alt="home"></span></a></li>
+                            <li><a href="#"><span>ページ</span></a></li>
+                            <li><a href="#"><span>ページ</span></a></li>
+                            <li class="gnavi02 menu__mega"><a href="#" class="ic_downn"><span>ページ</span></a>
+                              <div class="menu__second-level">
+                                <div class="block">
+                                  <div class="header_In">
+                                    <div class="row clearfix">
+                                      <div class="col-xs-3">
+                                        <div class="thumbnail normalbd">
+                                          <a href="#">
+                                            <img src="{% static 'img/menu_img01.jpg' %}" alt="タイトル">
+                                            <div class="caption">
+                                              <h3>タイトル</h3>
+                                              <p>テキストテキストテキストテキストテキストt</p>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-3">
+                                        <div class="thumbnail normalbd">
+                                          <a href="#">
+                                            <img src="{% static 'img/menu_img02.jpg' %}" alt="タイトル">
+                                            <div class="caption">
+                                              <h3>タイトル</h3>
+                                              <p>テキストテキストテキストテキストテキスト</p>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-3">
+                                        <div class="thumbnail normalbd">
+                                          <a href="#">
+                                            <img src="{% static 'img/menu_img03.jpg' %}" alt="タイトル">
+                                            <div class="caption">
+                                              <h3>タイトル</h3>
+                                              <p>テキストテキストテキストテキストテキスト</p>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-3">
+                                        <div class="thumbnail normalbd">
+                                          <a href="#">
+                                            <img src="{% static 'img/menu_img04.jpg' %}" alt="タイトル">
+                                            <div class="caption">
+                                              <h3>タイトル</h3>
+                                              <p>テキストテキストテキストテキストテキスト</p>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <a href="#" class="mega_menubtn">ボタン</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li><a href="#"><span>ページ</span></a></li>
+                            <li class="submenuon"><a href="#"><span>ページ</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#">テキスト</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">テキスト</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">テキスト</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">テキスト</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><span>ページ</span></a></li>
+                            <li class="gnavi03 menu__mega"><a href="#" class="ic_downn"><span>ページ</span></a>
+                              <div class="menu__second-level">
+                                <div class="block">
+                                  <div class="header_In">
+                                    <div class="row2 clearfix">
+                                      <div class="col-xs-2">
+                                        <div class="thumbnail normalbd">
+                                          <a href="#">
+                                            <img src="{% static 'img/menu_r_1.png' %}" alt="テキスト">
+                                            <div class="caption">
+
+                                              <p>テキスト</p>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-2">
+                                        <div class="thumbnail normalbd">
+                                          <a href="#">
+                                            <img src="{% static 'img/menu_r_2.png' %}" alt="テキスト">
+                                            <div class="caption">
+                                             <p>テキスト</p>
+                                           </div>
+                                         </a>
+                                       </div>
+                                     </div>
+                                     <div class="col-xs-2">
+                                      <div class="thumbnail normalbd">
+                                        <a href="#">
+                                          <img src="{% static 'img/menu_r_3.png' %}" alt="テキスト">
+                                          <div class="caption">
+                                           <p>テキスト</p>
+                                         </div>
+                                       </a>
+                                     </div>
+                                   </div>
+                                   <div class="col-xs-2">
+                                    <div class="thumbnail normalbd">
+                                      <a href="#">
+                                        <img src="{% static 'img/menu_r_4.png' %}" alt="テキスト">
+                                        <div class="caption">
+                                         <p>テキスト</p>
+                                       </div>
+                                     </a>
+                                   </div>
+                                 </div>
+                                 <div class="col-xs-2">
+                                  <div class="thumbnail normalbd">
+                                    <a href="#">
+                                      <img src="{% static 'img/menu_r_5.png' %}" alt="テキスト">
+                                      <div class="caption">
+                                       <p>テキスト</p>
+                                     </div>
+                                   </a>
+                                 </div>
+                               </div>
+                               <div class="col-xs-2">
+                                <div class="thumbnail normalbd">
+                                  <a href="#">
+                                    <img src="{% static 'img/menu_r_6.png' %}" alt="テキスト">
+                                    <div class="caption">
+                                     <p>テキスト</p>
+                                   </div>
+                                 </a>
+                               </div>
+                             </div>
+                             <div class="col-xs-2">
+                              <div class="thumbnail normalbd">
+                                <a href="#">
+                                  <img src="{% static 'img/menu_r_7.png' %}" alt="テキスト">
+                                  <div class="caption">
+                                   <p>テキスト</p>
+                                 </div>
+                               </a>
+                             </div>
+                           </div>
+                           <div class="col-xs-2">
+                            <div class="thumbnail normalbd">
+                              <a href="#">
+                                <img src="{% static 'img/menu_r_8.png' %}" alt="テキスト">
+                                <div class="caption">
+                                 <p>テキスト</p>
+                               </div>
+                             </a>
+                           </div>
+                         </div>
+                         <div class="col-xs-2">
+                          <div class="thumbnail normalbd">
+                            <a href="#">
+                              <img src="{% static 'img/menu_r_9.png' %}" alt="テキスト">
+                              <div class="caption">
+                               <p>テキスト</p>
+                             </div>
+                           </a>
+                         </div>
+                       </div>
+                       <div class="col-xs-2">
+                        <div class="thumbnail normalbd">
+                          <a href="#">
+                            <img src="{% static 'img/menu_r_10.png' %}" alt="テキスト">
+                            <div class="caption">
+                             <p>テキスト</p>
+                           </div>
+                         </a>
+                       </div>
+                     </div>
+                     <div class="col-xs-2">
+                      <div class="thumbnail normalbd">
+                        <a href="#">
+                          <img src="{% static 'img/menu_r_11.png' %}" alt="テキスト">
+                          <div class="caption">
+
+                            <p>テキスト</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                      <div class="thumbnail normalbd">
+                        <a href="#">
+                          <img src="{% static 'img/menu_r_12.png' %}" alt="テキスト">
+                          <div class="caption">
+                           <p>テキスト</p>
+                         </div>
+                       </a>
+                     </div>
+                   </div>
+                   <div class="col-xs-2">
+                    <div class="thumbnail normalbd">
+                      <a href="#">
+                        <img src="{% static 'img/menu_r_13.png' %}" alt="テキスト">
+                        <div class="caption">
+                         <p>テキスト</p>
+                       </div>
+                     </a>
+                   </div>
+                 </div>
+                 <div class="col-xs-2">
+                  <div class="thumbnail normalbd">
+                    <a href="#">
+                      <img src="{% static 'img/menu_r_14.png' %}" alt="テキスト">
+                      <div class="caption">
+                       <p>テキスト</p>
+                     </div>
+                   </a>
+                 </div>
+               </div>
+               <div class="col-xs-2">
+                <div class="thumbnail normalbd">
+                  <a href="#">
+                    <img src="{% static 'img/menu_r_15.png' %}" alt="テキスト">
+                    <div class="caption">
+                     <p>テキスト</p>
+                   </div>
+                 </a>
+               </div>
+             </div>
+           </div>
+           <a href="#" class="mega_menubtn">ボタン</a>
+         </div>
+       </div>
+     </div>
+   </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="spMenu">
+            <h1 class="text">テキストテキストテキストテキスト</h1>
+              <div class="header_sp clearfix">
+              
+                <p class="title"><a href="#"><img class="logo_sp" src="img/logo_header.png' %}" alt="img" width="113" height="35"></a>
+                </p>
+                <div class="title_header">
+                  <p class="inquiries">電話でのお問い合わせ：平日9:30-20:00</p>
+                  <a href="tel:" class="phone"><img src="{% static 'img/ph.png' %}" alt="tel:01001010" width="178" height="19"></a>
+                </div>
+                <div id="js-iconMenu" class="iconMenu">
+                  <div class="icon_item lineOne"></div>
+                  <div class="icon_item lineTwo"></div>
+                  <div class="icon_item lineThree"></div>
+                </div>
+              </div>
+              <nav class="mainMenu  js-toggleEffect">
+                <div id="js-iconMenu" class="iconMenu on spclose">
+                  <div class="icon_item lineOne"></div>
+                  <div class="icon_item lineTwo"></div>
+                  <div class="icon_item lineThree"></div>
+                </div>
+                <h2 class="sitemenu_ttl"><img src="{% static 'img/sp_menu_ttl.png' %}" alt="Sitemenu"></h2>
+                <ul class="sp_menubtn">
+                  <li><a href="#"><img src="{% static 'img/sp_menucv.png' %}" alt="簡単６０秒薬剤師のお仕事紹介転職相談に無料登録"></a></li>
+                  <li><a href="#"><img src="{% static 'img/sp_menuserach.png' %}" alt="求人情報を探す"></a></li>
+                </ul>
+                <ul class="sp_menufollow clearfix">
+                  <li> <a href="#" class="sp_menubook"><img src="{% static 'img/sp_menu_clip.png' %}" alt="検討リスト" /><br/>検討リスト</a></li>
+                  <li> <a href="#" class="sp_menuhistory"><i class="fa fa-file-text"></i><br/>閲覧履歴</a></li>
+                </ul>
+                <ul class="mainMenu_list">
+                  <li class="menu_item sfa-about"><a href="#"><span>ページ</span></a></li>
+                  <li class="menu_item sfa-faq"><a href="#"><span>ページ</span></a></li>
+                  <li class="menu_item sfa-toku hasubmenu"><a href="javascript:void(0)"><span>ページ</span></a>
+                    <ul>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_item sfa-content hasubmenu"><a href="javascript:void(0)"><span>ページ</span></a>
+                    <ul>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_item sfa-shop hasubmenu"><a href="javascript:void(0)"><span>ページ</span></a>
+                    <ul>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu_item sfa-support hasubmenu"><a href="javascript:void(0)"><span>ページ</span></a>
+                    <ul>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                      <li><a href="#">テキスト</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="mainMenu_list spemuother">
+                  <li class="menu_item menutwocols clearfix">
+                    <a href="#">ページ</a>
+                    <a href="#">ページ</a>
+                  </li>
+                  <li class="menu_item menutwocols clearfix">
+                    <a href="#">ページ</a>
+                    <a href="#">ページ</a>
+                  </li>
+                </ul>
+                <ul class="mainMenu_list spmenuclose">
+                  <li class="menu_item menu_close">
+                    <a><span class="closesign"></span>閉じる</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </header>
+
+    <section class="conts">
+        <div class="wrapper clearfix">
+        <div class="main">
+            
+             {% block content %}{% endblock %}
+
+        </div>
+        <div class="sidebar">
+          <img src="{% static 'img/sidebar.png' %}" alt="sidebar">
+        </div>
+        </div>
+        </section>
+        <div id="pagetop">
+            <div class="pc clearfix">
+                <div class="pagetop"><a href="#" class="back-to-top"><span>PAGE <br>TOP</span></a></div>
+            </div>
+            <div class="sp">
+                <div class="pagetop_sp"><a href="#" class="back-to-top"><span>PAGE TOPへ戻る</span></a></div>
+            </div>
+        </div>
+        <footer>
+          <div class="wrapper">
+          <div class="bottom">
+              <p class="footer_logo"><img src="{% static 'img/logo.png' %}"></p>
+              <p class="text"> 
+                  <br>©2000-2017 . All Rights Reserved.</p>
+          </div>
+          </div>
+        </footer>
+        
+</body>
+</html>

@@ -147,30 +147,56 @@ def thanksView(request):
 
 def projectView(request):
  project_list=[]
- project_list2=[]
- #project_list.append(Project("0","0","0","0"))
- #project_list.append(Project("1","1","1","1"))
+ project_list.append(Project("0","0","0","0"))
+ project_list.append(Project("1","1","1","1"))
  
- #print(project_list)
+ print(project_list)
   
- html_doc=urllib.request.urlopen("https://www.doctor-vision.com/search_full/all/")
+ html_doc=urllib.request.urlopen("https://www.doctor-vision.com/search_full/all/all")
  soup = BeautifulSoup(html_doc, 'html.parser')
- html_doc2=urllib.request.urlopen("https://rikunabi-yakuzaishi.jp/search/?page=&from=&pref=13&x=71&y=20&srchld=full_n_13_n_n_n_n")
- soup2 = BeautifulSoup(html_doc2, 'html.parser')
 
+ head_tags=soup.head
+ #head tag
+ #**<head><title>The Dormouse's story</title></head>
 
+ #head_tags.contents
+ #**[<title>The Dormouse's story</title>]
+ 
+ title_tag=head_tags.contents[0]
+ #title_tag
+ #**<title>The Dormouse's story</title>
 
+ #title_tag.contents
+ #The Dormouse's story
 
-
+ # print(soup.prettify())
+ pgtitle=soup.title
+ # <title>The Dormouse's story</title>
+ pg_ttlname=soup.title.name
+ # u'title'
+ pg_ttlstrig=soup.title.string
+ # the dormouse's story
+ pg_ttlparentname=soup.title.parent.name
+ #head
+ pg_ptag=soup.p
+ #<p class="title"></p>
+ pg_pclass=soup.p['class']
+ #show class name of all p
+ pg_atag=soup.a
  #<a><a/>
- #pg_alla=soup.find_all('h3',class_="pg_settl")
- for link in soup.find_all('h3',class_="pg_settl"):
-    project_list.append(Project(link.text,"0","0","0"))
- #for project_lists in project_list:
-    #print(project_lists.prjName)
- for link in soup2.find_all('p',class_="catch"):
-    project_list2.append(Project(link.text,"0","0","0"))
+ pg_alla=soup.find_all('a')
+ #show all a tag
+ pg_findid=soup.find(id='link3')
+ #show data of id link3
+
+ #for link in soup.find_all('a'):
+   #print(link.get('href'))
+ #show href tag of all value
+
+ #print(soup.get_text())
+ #show all text of page
 
 
- return render(request,"project_list.html",{'soup': project_list,'soup2': project_list2})
+
+ return render(request,"project_list.html",{'soup': pg_all,})
 
